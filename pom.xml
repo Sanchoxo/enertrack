@@ -22,6 +22,22 @@
     </properties>
 
     <dependencies>
+
+        <!-- Web Security -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
         <!-- JPA Dependency -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -33,6 +49,7 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- Spring WEB-COnfig -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
