@@ -2,7 +2,7 @@ package de.changeperspective.enertrack.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import de.changeperspective.enertrack.dto.WaterMeter;
+import de.changeperspective.enertrack.persistence.dto.WaterMeter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,13 +21,13 @@ public class WaterRestController {
     }
 
     @RequestMapping("")
-    public String waterOverview() throws JsonProcessingException {
+    public String waterOverview() {
         return "Wasserzählerübersicht";
     }
 
     @GetMapping("/getWaterMeter")
     public String getWater(@RequestParam("id") long id) throws JsonProcessingException {
-        WaterMeter waterMeter = new WaterMeter(id);
+        WaterMeter waterMeter = new WaterMeter("TEst", "Test2");
         return objectMapper.writeValueAsString(waterMeter);
     }
 
